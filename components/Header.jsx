@@ -7,6 +7,10 @@ import Image from "next/image"
 import MuiNextLink from "./MuiNextLink"
 import Navbar from './Navbar'
 import SideDrawer from "./SideDrawer";
+import HideOnScroll from "./HideOnScroll";
+import Fab from "@mui/material/Fab";
+import KeyboardArrowUp from "@mui/icons-material/KeyboardArrowUp";
+import BackToTop from "./BackToTop";
 
 const Offset = styled("div")(({ theme }) => theme.mixins.toolbar);
 
@@ -22,6 +26,7 @@ export const navLinks = [
 export default function Header () {
   return (
     <>
+    <HideOnScroll>
       <AppBar position="fixed">
         <Toolbar>
           <Container
@@ -38,7 +43,13 @@ export default function Header () {
           </Container>
         </Toolbar>
       </AppBar>
-      <Offset />
+      </HideOnScroll>
+      <Offset id="back-to-top-anchor" />
+      <BackToTop>
+      <Fab color="secondary" size="large" aria-label="back to top">
+       <KeyboardArrowUp />
+       </Fab>
+</BackToTop>
     </>
   );
 };
