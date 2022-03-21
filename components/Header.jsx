@@ -15,10 +15,11 @@ import BackToTop from "./BackToTop";
 const Offset = styled("div")(({ theme }) => theme.mixins.toolbar);
 
 export const navLinks = [
+    { title: `Non processed orders`, path: `/` },
     { title: `Processed orders `, path: `/Processed-orders` },
     { title: `Orders accepted by naughty list`, path: `/Orders-accepted-by-naughty-list` },
     { title: `Orders rejected by naughty list`, path: `/Orders-rejected-by-naughty-list` },
-    { title: `contact`, path: `/Contact` },
+   
   ];
 
 

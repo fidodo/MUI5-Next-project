@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 
 export default function index() {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="sm">
       <Hero
      imgSrc="/home-hero.png"
      imgAlt="Happy smiley emoji"/>
